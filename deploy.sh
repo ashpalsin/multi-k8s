@@ -7,7 +7,7 @@ docker push ashpalsin/multi-worker:latest
 docker push ashpalsin/multi-client:$SHA
 docker push ashpalsin/multi-server:$SHA
 docker push ashpalsin/multi-worker:$SHA
-kubectl apply -f k8s
+kubectl apply -f K8s
 kubectl set image deployments/server-deployment server=ashpalsin/multi-server:$SHA
 kubectl set image deployments/client-deployment client=ashpalsin/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=ashpalsin/multi-worker:$SHA
